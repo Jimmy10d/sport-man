@@ -27,10 +27,7 @@
   },
   "RoleMapping": {
     "dataSource": "cloudantNoSQLDB",
-    "public": false,
-    "options": {
-      "strictObjectIDCoercion": true
-    }
+    "public": false
   },
   "Role": {
     "dataSource": "cloudantNoSQLDB",
@@ -77,4 +74,5 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  }
 }
