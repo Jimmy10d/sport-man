@@ -1,0 +1,67 @@
+{
+  "name": "Message",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": false
+    },
+    "sender": {
+      "type": "string",
+      "required": true
+    },
+    "receiver": {
+      "type": "string",
+      "required": true
+    },
+    "sender_name": {
+      "type": "string",
+      "required": true
+    },
+    "receiver_name": {
+      "type": "string",
+      "required": true
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": false
+    },
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "read": {
+      "type": "string",
+      "required": false
+    },
+    "photo": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "getMessage"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "getMessage"
+    }
+  ],
+  "methods": {}
+}

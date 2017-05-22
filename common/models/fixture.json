@@ -1,0 +1,27 @@
+{
+  "name": "fixture",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fixture_number": {
+      "type": "string"
+    },
+    "fixture_matches": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "matches": {
+      "type": "hasMany",
+      "model": "match",
+      "foreignKey": "fixture_number"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

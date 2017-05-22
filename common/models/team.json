@@ -1,0 +1,57 @@
+{
+  "name": "team",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "team_abrName": {
+      "type": "string"
+    },
+    "team_name": {
+      "type": "string",
+      "required": true
+    },
+    "team_logo": {
+      "type": "string"
+    },
+    "team_coach": {
+      "type": "string"
+    },
+    "team_position": {
+      "type": "string"
+    },
+    "team_play": {
+      "type": "string"
+    },
+    "team_point": {
+      "type": "string"
+    },
+    "team_win": {
+      "type": "string"
+    },
+    "team_draw": {
+      "type": "string"
+    },
+    "team_lose": {
+      "type": "string"
+    },
+    "team_goalFor": {
+      "type": "string"
+    },
+    "team_goalAgainst": {
+      "type": "string"
+    },
+    "team_squad": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "schedule",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "schedule_name": {
+      "type": "string"
+    },
+    "schedule_fixture": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,39 @@
+{
+  "name": "match",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "match_name": {
+      "type": "string"
+    },
+    "match_venue": {
+      "type": "string"
+    },
+    "match_time": {
+      "type": "string"
+    },
+    "match_date": {
+      "type": "string"
+    },
+    "match_referee": {
+      "type": "string"
+    },
+    "match_homeTeam": {
+      "type": "string"
+    },
+    "match_awayTeam": {
+      "type": "string"
+    },
+    "match_fixture": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

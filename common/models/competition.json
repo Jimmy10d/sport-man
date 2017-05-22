@@ -1,0 +1,69 @@
+{
+  "name": "competition",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "idInjection": true
+    },
+    "comp_name": {
+      "type": "string",
+      "required": true
+    },
+    "comp_fee": {
+      "type": "number",
+      "required": true
+    },
+    "comp_regulation": {
+      "type": "string",
+      "required": true
+    },
+    "comp_type": {
+      "type": "string",
+      "id": false,
+      "required": true
+    },
+    "comp_location": {
+      "type": "string"
+    },
+    "comp_award": {
+      "type": "string"
+    },
+    "comp_finish": {
+      "type": "string"
+    },
+    "comp_start": {
+      "type": "string"
+    },
+    "register": {
+      "type": "string"
+    },
+    "comp_notes": {
+      "type": "string"
+    },
+    "comp_teams": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "teams": {
+      "type": "hasMany",
+      "model": "team",
+      "foreignKey": ""
+    },
+    "fixtures": {
+      "type": "hasMany",
+      "model": "fixture",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
