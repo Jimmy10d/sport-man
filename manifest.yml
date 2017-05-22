@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: sport-man
+  host: sport-man
+  disk_quota: 1024M
+  services:
+  - sport-man-cloudantNoSQLDB
