@@ -14,63 +14,63 @@
     ]
   },
   "User": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": false
   },
   "ACL": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": false
   },
   "Role": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": false
   },
   "competition": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "team": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "user": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "schedule": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "match": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "Message": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
   "fixture": {
-    "dataSource": "MysqlDB",
+    "dataSource": "cloudantNoSQLDB",
     "public": true,
     "$promise": {},
     "$resolved": true

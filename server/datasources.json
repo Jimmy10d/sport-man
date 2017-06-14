@@ -3,18 +3,18 @@
     "name": "db",
     "connector": "memory"
   },
-  "MysqlDB": {
-    "host": "sl-us-south-1-portal.0.dblayer.com",
-    "port": 16987,
-    "url": "sl-us-south-1-portal.0.dblayer.com:16987/compose",
-    "database": "bmix-dal-yp-6a595f5a-3a2f-4b75-b656-e996da36ee82",
-    "password": "LNQUZVFUCKXZSNWN",
-    "name": "MysqlDB",
-    "user": "admin",
+  "cloudantNoSQLDB": {
+    "host": "5abe3ac3-b325-4498-bfb4-6bb1f0c68683-bluemix.cloudant.com",
+    "port": 443,
+    "url": "https://5abe3ac3-b325-4498-bfb4-6bb1f0c68683-bluemix:acbbc03ba3a5d6c1d41f3cf7931e49a8cc19c53a5052bbc34c2a412df8b125e2@5abe3ac3-b325-4498-bfb4-6bb1f0c68683-bluemix.cloudant.com",
+    "database": "db_sportman",
+    "password": "acbbc03ba3a5d6c1d41f3cf7931e49a8cc19c53a5052bbc34c2a412df8b125e2",
+    "name": "cloudantNoSQLDB",
+    "user": "5abe3ac3-b325-4498-bfb4-6bb1f0c68683-bluemix",
     "syslog_drain_url": null,
-    "label": "compose-for-mysql",
+    "label": "cloudantNoSQLDB",
     "provider": null,
-    "plan": "Standard",
-    "connector": "mysql"
+    "plan": "Lite",
+    "connector": "cloudant"
   }
 }
