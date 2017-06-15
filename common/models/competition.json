@@ -4,13 +4,26 @@
   "strict": false,
   "idInjection": false,
   "options": {
+    "mysql":{
+      "schema": "compose",
+      "table": "competition"
+    }
+   },
     "validateUpsert": true
   },
   "properties": {
     "id": {
-      "type": "string",
+      "type": "number",
       "id": true,
-      "idInjection": true
+      "idInjection": true,
+      "mysql": {
+        "columnName": "id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
     },
     "comp_name": {
       "type": "string",
@@ -32,9 +45,6 @@
     "comp_location": {
       "type": "string"
     },
-    "comp_award": {
-      "type": "string"
-    },
     "comp_finish": {
       "type": "string"
     },
@@ -48,6 +58,9 @@
       "type": "string"
     },
     "comp_teams": {
+      "type": "string"
+    },
+    "comp_award": {
       "type": "string"
     }
   },
