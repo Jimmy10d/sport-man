@@ -127,7 +127,7 @@ var schema_v1 = {
 	var app = loopback();
 	var Model = app.models();
 
-	var ds = Model.app.dataSources.mysql;
+	var ds = Model.app.dataSources.MysqlDB;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
