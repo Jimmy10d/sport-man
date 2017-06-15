@@ -60,4 +60,80 @@ module.exports = function(Competition) {
 
 };
 
+var schema_v1 = {
+  "name": "competition",
+  "options": {
+    "idInjection": false,
+    "mysql": {
+      "schema": "Compose",
+      "table": "COMPETITION"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "length": 50,
+      "id": true
+    },
+    "comp_name": {
+      "type": "string",
+      "length": 50,
+      "required": true
+    },
+    "comp_fee": {
+      "type": "number",
+      "length": 50,
+      "required": true
+    },
+    "comp_regulation": {
+      "type": "string",
+      "length": 50,
+      "required": true
+    },
+    "comp_type": {
+      "type": "string",
+      "length": 50,
+      "required": true
+    },
+    "comp_location": {
+      "type": "string",
+      "length": 50
+    },
+    "comp_finish": {
+      "type": "string",
+      "length": 50
+    },
+    "comp_start": {
+      "type": "string",
+      "length": 50
+    },
+    "register": {
+      "type": "string",
+      "length": 50
+    },
+    "comp_notes": {
+      "type": "string",
+      "length": 50
+    },
+    "comp_teams": {
+      "type": "string",
+      "length": 50
+    },
+    "comp_award": {
+      "type": "string",
+      "length": 50
+    }
+  }
+};
+
+var ds = Model.app.dataSources.mysql;
+
+ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
+
+ds.automigrate(function () {
+  ds.discoverModelProperties('COMPETITION', function (err, props) {
+    console.log(props);
+  });
+});
+
 
