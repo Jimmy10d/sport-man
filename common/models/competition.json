@@ -4,25 +4,13 @@
   "strict": false,
   "idInjection": false,
   "options": {
-    "validateUpsert": true,
-    "mysql": {
-      "schema": "compose",
-      "table": "ACL"
-    }
-   },
+    "validateUpsert": true
+  },
   "properties": {
     "id": {
-      "type": "number",
+      "type": "string",
       "id": true,
-      "idInjection": true,
-      "mysql": {
-        "columnName": "id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "NO"
-      }
+      "idInjection": true
     },
     "comp_name": {
       "type": "string",
