@@ -4,13 +4,12 @@
   "strict": false,
   "idInjection": false,
   "options": {
-    "mysql":{
+    "validateUpsert": true,
+    "mysql": {
       "schema": "compose",
       "table": "competition"
     }
    },
-    "validateUpsert": true
-  },
   "properties": {
     "id": {
       "type": "number",
