@@ -123,16 +123,17 @@ var schema_v1 = {
     }
   }
 };
+	var models = app.models();
 
-	var ds = models.app.dataSources.mysql;
+	// var ds = Model.app.dataSources.mysql;
 
-	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
+	// ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
-	ds.automigrate(function () {
-	  ds.discoverModelProperties('COMPETITION', function (err, props) {
-	    console.log(props);
-	  });
-	});
+	// ds.automigrate(function () {
+	//   ds.discoverModelProperties('COMPETITION', function (err, props) {
+	//     console.log(props);
+	//   });
+	// });
 
 };
 
