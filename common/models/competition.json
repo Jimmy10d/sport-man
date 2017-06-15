@@ -7,7 +7,7 @@
     "validateUpsert": true,
     "mysql": {
       "schema": "compose",
-      "table": "competition"
+      "table": "ACL"
     }
    },
   "properties": {
