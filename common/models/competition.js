@@ -124,7 +124,7 @@ var schema_v1 = {
   }
 };
 
-	var ds = Model.app.dataSources.mysql;
+	var ds = models.app.dataSources.mysql;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
