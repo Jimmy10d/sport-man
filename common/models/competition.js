@@ -123,6 +123,8 @@ var schema_v1 = {
     }
   }
 };
+	var loopback = require('loopback');
+	var app = loopback();
 	var models = app.models();
 
 	// var ds = Model.app.dataSources.mysql;
