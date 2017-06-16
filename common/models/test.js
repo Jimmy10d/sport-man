@@ -30,7 +30,7 @@ var schema_v1 = {
 };
 	var loopback = require('loopback');
 	var app = loopback();
-	// var boot = require('loopback-boot');
+	var boot = require('loopback-boot');
 	// var DataSource = require('loopback-datasource-juggler').DataSource;
 	// var ds = new DataSource({
 	// 	connector: require('loopback-connector-mysql'),
@@ -41,7 +41,14 @@ var schema_v1 = {
 	// 	password: 'DTNXDTJQNQXDYVAZ',
 	// });
 	// var Model = app.models();
-	var ds = Test.app.datasources.mysql;
+
+	app.boot({
+	  dataSources: {
+	    db: {connector: 'mysql'}
+	  }
+	});
+
+	var ds = Test.app.datasources.db;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
