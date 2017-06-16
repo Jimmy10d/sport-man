@@ -125,13 +125,17 @@ var schema_v1 = {
 };
 	var loopback = require('loopback');
 	var app = loopback();
-	app.boot({
-		dataSource: {
-			db: {connector: 'MysqlDB'}
-		}
+	var DataSource = require('loopback-datasource-juggler').DataSource;
+	var ds = new DataSource({
+		connector: require('loopback-connector-mysql'),
+		host: 'sl-us-south-1-portal.1.dblayer.com',
+		port: 17034,
+		database: 'bmix-dal-yp-73799ecd-b8b2-4c81-9ab1-0edd7aab8177',
+		username: 'admin',
+		password: 'DTNXDTJQNQXDYVAZ',
 	});
-	var Model = app.models();
-	var ds = app.dataSource('db');
+	// var Model = app.models();
+	// var ds = app.dataSource('db');
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
