@@ -42,7 +42,7 @@ var schema_v1 = {
 	// });
 	// var Model = app.models();
 
-	app.boot({
+	boot({
 	  dataSources: {
 	    db: {connector: 'mysql'}
 	  }
