@@ -41,7 +41,7 @@ var schema_v1 = {
 	// 	password: 'DTNXDTJQNQXDYVAZ',
 	// });
 	// var Model = app.models();
-	var ds = Test.app.DataSource.mysql;
+	var ds = Test.app.dataSources.mysql;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
