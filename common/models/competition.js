@@ -125,9 +125,13 @@ var schema_v1 = {
 };
 	var loopback = require('loopback');
 	var app = loopback();
+	app.boot({
+		dataSource: {
+			db: {connector: 'MysqlDB'}
+		}
+	});
 	var Model = app.models();
-
-	var ds = app.dataSource('MysqlDB');
+	var ds = app.dataSource('db');
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
