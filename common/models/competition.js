@@ -63,7 +63,7 @@ var schema_v1 = {
   "options": {
     "idInjection": false,
     "mysql": {
-      "schema": "Compose",
+      "schema": "compose",
       "table": "COMPETITION"
     }
   },
@@ -139,7 +139,7 @@ var schema_v1 = {
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
-	ds.automigrate(function () {
+	ds.autoupdate(function () {
 	  ds.discoverModelProperties('COMPETITION', function (err, props) {
 	    console.log(props);
 	  });
