@@ -5,7 +5,7 @@ var schema_v1 = {
   "name": "test",
   "options": {
     "idInjection": false,
-    "mysql": {
+    "MysqlDB": {
       "schema": "compose",
       "table": "TEST"
     }
@@ -28,7 +28,7 @@ var schema_v1 = {
     }
   }
 };
-	var loopback = require('loopback');
+	// var loopback = require('loopback');
 	// var app = loopback();
 	// var DataSource = require('loopback-datasource-juggler').DataSource;
 	// var mysqlds = new DataSource({
@@ -40,7 +40,7 @@ var schema_v1 = {
 	// 	password: 'DTNXDTJQNQXDYVAZ',
 	// });
 	// var Model = app.models();
-	var ds = Test.app.dataSources.mysql;
+	var ds = Test.app.dataSources.MysqlDB;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
