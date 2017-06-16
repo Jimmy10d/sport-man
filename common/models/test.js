@@ -42,13 +42,15 @@ var schema_v1 = {
 	// });
 	// var Model = app.models();
 
-	boot({
-	  dataSources: {
-	    db: {connector: 'mysql'}
-	  }
-	});
+	// boot({
+	//   dataSources: {
+	//     db: {connector: 'mysql'}
+	//   }
+	// });
 
-	var ds = Test.app.datasources.db;
+	loopback.createDataSource('mysql', 'loopback-connector-mysql');
+
+	var ds = Test.app.dataSources.mysql;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
