@@ -31,15 +31,15 @@ var schema_v1 = {
 	var loopback = require('loopback');
 	var app = loopback();
 	var boot = require('loopback-boot');
-	// var DataSource = require('loopback-datasource-juggler').DataSource;
-	// var ds = new DataSource({
-	// 	connector: require('loopback-connector-mysql'),
-	// 	host: 'sl-us-south-1-portal.1.dblayer.com',
-	// 	port: 17034,
-	// 	database: 'compose',
-	// 	username: 'admin',
-	// 	password: 'DTNXDTJQNQXDYVAZ',
-	// });
+	var DataSource = require('loopback-datasource-juggler').DataSource;
+	var ds = new DataSource({
+		connector: require('loopback-connector-mysql'),
+		host: 'sl-us-south-1-portal.1.dblayer.com',
+		port: 17034,
+		database: 'compose',
+		username: 'admin',
+		password: 'DTNXDTJQNQXDYVAZ',
+	});
 	// var Model = app.models();
 
 	// boot({
@@ -48,9 +48,9 @@ var schema_v1 = {
 	//   }
 	// });
 
-	loopback.createDataSource('mysql', 'loopback-connector-mysql');
+	// loopback.createDataSource('mysql', 'loopback-connector-mysql');
 
-	var ds = Test.app.dataSources.mysql;
+	// var ds = Test.app.dataSources.mysql;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
