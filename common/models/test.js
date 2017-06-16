@@ -29,18 +29,18 @@ var schema_v1 = {
   }
 };
 	var loopback = require('loopback');
-	var app = loopback();
-	var DataSource = require('loopback-datasource-juggler').DataSource;
-	var mysqlds = new DataSource({
-		connector: require('loopback-connector-mysql'),
-		host: 'sl-us-south-1-portal.1.dblayer.com',
-		port: 17034,
-		database: 'compose',
-		username: 'admin',
-		password: 'DTNXDTJQNQXDYVAZ',
-	});
+	// var app = loopback();
+	// var DataSource = require('loopback-datasource-juggler').DataSource;
+	// var mysqlds = new DataSource({
+	// 	connector: require('loopback-connector-mysql'),
+	// 	host: 'sl-us-south-1-portal.1.dblayer.com',
+	// 	port: 17034,
+	// 	database: 'compose',
+	// 	username: 'admin',
+	// 	password: 'DTNXDTJQNQXDYVAZ',
+	// });
 	// var Model = app.models();
-	var ds = Test.app.mysqlds;
+	var ds = Test.app.dataSources.mysql;
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
