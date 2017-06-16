@@ -44,7 +44,7 @@ var schema_v1 = {
 
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
-	ds.autoupdate(function () {
+	ds.automigrate(function () {
 	  ds.discoverModelProperties('ACL', function (err, props) {
 	    console.log(props);
 	  });
