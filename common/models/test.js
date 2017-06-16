@@ -7,7 +7,7 @@ var schema_v1 = {
     "idInjection": false,
     "mysql": {
       "schema": "compose",
-      "table": "TEST"
+      "table": "ACL"
     }
   },
   "properties": {
@@ -45,7 +45,7 @@ var schema_v1 = {
 	ds.createModel(schema_v1.name, schema_v1.properties, schema_v1.options);
 
 	ds.autoupdate(function () {
-	  ds.discoverModelProperties('TEST', function (err, props) {
+	  ds.discoverModelProperties('ACL', function (err, props) {
 	    console.log(props);
 	  });
 	});
