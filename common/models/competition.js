@@ -130,7 +130,7 @@ var schema_v1 = {
 		connector: require('loopback-connector-mysql'),
 		host: 'sl-us-south-1-portal.1.dblayer.com',
 		port: 17034,
-		database: 'Compose',
+		database: 'compose',
 		username: 'admin',
 		password: 'DTNXDTJQNQXDYVAZ',
 	});
