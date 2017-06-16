@@ -74,5 +74,11 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "test": {
+    "dataSource": "MysqlDB",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }
